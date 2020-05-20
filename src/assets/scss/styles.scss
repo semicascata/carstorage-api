@@ -1,0 +1,179 @@
+// Bootstrap Module
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss"; // Fonts from GoogleFonts
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bree+Serif|Playfair+Display&display=swap');
+
+// Alias
+$font-primary: 'Bree Serif', serif;
+$font-secondary: 'Playfair Display', serif;
+$font-tertiary: 'Amatic SC', cursive;
+$primary: #dc3545;
+$secondary: #3f3f44;
+
+body {
+	font-family: $font-primary;
+	font-size: 14px;
+	line-height: 1.8;
+	font-weight: normal;
+	background: #fafafa;
+	color: $secondary;
+}
+
+// Links
+a {
+	transition: 0.3s all ease;
+	color: $primary;
+
+	&:focus,
+	&:hover {
+		text-decoration: none !important;
+		outline: none !important;
+		box-shadow: none;
+	}
+}
+
+// Buttons
+button {
+	transition: 0.3s all ease;
+
+	&:focus,
+	&:hover {
+		text-decoration: none !important;
+		outline: none !important;
+		box-shadow: none !important;
+	}
+}
+
+// Titles
+.h1,.h2,.h3,.h4,.h5,
+h1,h2,h3,h4,h5 {
+	line-height: 1.5;
+	font-weight: 400;
+	font-family: $font-primary;
+	color: $secondary;
+}
+
+// Navbar
+.navbar {
+	padding: 6px 10px;
+	background: #fff;
+	border: none;
+	border-radius: 10px;
+	margin-bottom: 40px;
+	box-shadow: 1px 1px 3px #dddddd;
+}
+
+.navbar-btn {
+	box-shadow: none;
+	outline: none !important;
+	border: none;
+}
+
+// Sidebar
+.wrapper {
+	width: 100%;
+}
+
+#sidebar {
+	min-width: 300px;
+	max-width: 300px;
+	background: #1d1919;
+	color: #fff;
+	transition: all 0.3s;
+
+	&.active {
+		margin-left: -300px;
+	}
+
+	.logo {
+		display: block;
+		width: 120px;
+		height: 120px;
+		margin: 0 auto;
+	}
+
+	ul.components {
+		padding: 0;
+	}
+
+	ul {
+
+		li {
+			font-size: 16px;
+
+			> ul {
+				margin-left: 10px;
+
+				li {
+					font-size: 14px;
+				}
+			}
+
+			a {
+				padding: 10px 0;
+				display: block;
+				color: #dddddd;
+				border-bottom: 1px solid #363636;
+
+				&:hover {
+					color: $primary;
+				}
+			}
+
+			&.active {
+				> a {
+					background: transparent;
+					color: $primary;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		margin-left: -300px;
+
+		&.active {
+			margin-left: 0;
+		}
+	}
+}
+
+a[data-toggle="collapse"] {
+	position: relative;
+}
+
+.dropdown-toggle::after {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+// Content Pages
+#content {
+	width: 100%;
+	padding: 0;
+	min-height: 100vh;
+	transition: all 0.3s;
+}
+
+.btn {
+	&.btn-primary {
+		background: $primary;
+		border-color: $primary;
+
+		&:focus,
+		&:hover {
+			background: $primary !important;
+			border-color: $primary !important;
+		}
+	}
+}
+
+// Footer
+.footer {
+	p {
+		color: #e4e4e4;
+		text-align: center;
+	}
+}

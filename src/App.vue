@@ -1,28 +1,47 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
+<div id="app">
+  <div class="wrapper d-flex align-items-stretch">
 
+    <!-- SideBar -->
+    <nav id="sidebar">
+      <Sidebar />
+    </nav>
+
+    <!-- Toggle Sidebar -->
+    <button type="button" id="sidebarCollapse" class="btn">
+      <i class="fa fa-bars"></i>
+    </button>
+
+    <div id="content" class="p-4 p-md-5">
+
+      <!-- Navbar -->
+      <Navbar />
+
+      <!-- Page Content -->
+      <router-view />
+
+    </div>
+  </div>
+</div>
+</template>
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import $ from 'jquery'
+import Sidebar from './components/layout/navbar/views/Sidebar'
+import Navbar from './components/layout/navbar/views/Navbar'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Sidebar,
+    Navbar
+  },
+  mounted() {
+    // jQuery
+    $('#sidebarCollapse').click(() => {
+      $('#sidebar').toggleClass('active')
+    })
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss" scoped>
 </style>

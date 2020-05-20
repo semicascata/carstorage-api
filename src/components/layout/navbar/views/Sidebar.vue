@@ -9,7 +9,10 @@
       <router-link to="/">Home</router-link>
     </li>
     <li>
-      <a href="#">About</a>
+      <router-link to="/about">About</router-link>
+    </li>
+    <li>
+      <router-link to="/contact">Contact</router-link>
     </li>
 
     <li v-if="isLogged">
@@ -18,17 +21,7 @@
         <li>
           <a href="#">Page 1</a>
         </li>
-        <li>
-          <a href="#">Page 2</a>
-        </li>
-        <li>
-          <a href="#">Page 3</a>
-        </li>
       </ul>
-    </li>
-
-    <li>
-      <a href="#">Contact</a>
     </li>
   </ul>
 

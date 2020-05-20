@@ -7,10 +7,10 @@
       <Sidebar />
     </nav>
 
-    <!-- Toggle Sidebar -->
-    <button type="button" id="sidebarCollapse" class="btn">
-      <i class="fa fa-bars"></i>
-    </button>
+      <!-- Toggle Sidebar -->
+      <button type="button" id="sidebarCollapse" class="btn">
+        <i class="fa fa-bars"></i>
+      </button>
 
     <div id="content" class="p-4 p-md-5">
 

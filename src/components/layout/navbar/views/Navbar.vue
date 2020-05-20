@@ -4,7 +4,7 @@
 
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 
-      <li v-if="isLogged" class="nav-item">
+      <li v-if="isLogged" class="nav-item user">
         <a type="button" class="nav-link">
           <img :src="loggedUser.urlFoto" class="icon">
           {{ user }}
@@ -35,10 +35,10 @@
           <router-link to="/" class="nav-link">Home</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <router-link to="/about" class="nav-link">About</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <router-link to="/contact" class="nav-link">Contact</router-link>
         </li>
       </ul>
     </div>
@@ -98,8 +98,9 @@ export default {
 
 <style lang="scss" scoped>
 .icon {
-  width: 30px;
-  border-radius: 100px;
   margin-right: 5px;
+  border-radius: 100px;
+  width: 28px;
+  height: 28px;
 }
 </style>

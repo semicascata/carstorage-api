@@ -1,8 +1,6 @@
 // Bootstrap Module
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss"; // Fonts from GoogleFonts
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bree+Serif|Playfair+Display&display=swap');
-
-// Alias
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bree+Serif|Playfair+Display&display=swap'); // Alias
 $font-primary: 'Bree Serif', serif;
 $font-secondary: 'Playfair Display', serif;
 $font-tertiary: 'Amatic SC', cursive;
@@ -96,7 +94,6 @@ h1,h2,h3,h4,h5 {
 	}
 
 	ul {
-
 		li {
 			font-size: 16px;
 
@@ -175,5 +172,44 @@ a[data-toggle="collapse"] {
 	p {
 		color: #e4e4e4;
 		text-align: center;
+	}
+}
+
+// Contact
+.contact {
+	width: auto;
+	margin: 20px auto 100px;
+	text-align: center;
+	color: #363636;
+
+	.me {
+		margin-bottom: 130px;
+		font-family: 'Bree Serif', serif;
+
+		h4 {
+			margin-top: 0;
+			font-size: 1.2rem;
+		}
+
+		h3 {
+			margin-bottom: 2px;
+			font-size: 1.6rem;
+		}
+	}
+
+	.cardMe {
+		font-family: 'Bree Serif', serif;
+		font-size: 1rem;
+		text-align: center;
+		margin: 18px auto 0;
+		width: 221px;
+	}
+
+	p {
+		margin: 2px auto 0;
+
+		a {
+			text-align: left;
+		}
 	}
 }
